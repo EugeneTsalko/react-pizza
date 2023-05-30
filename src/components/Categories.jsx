@@ -9,7 +9,10 @@ const Categories = () => {
     <div className="categories">
       <ul>
         {categories.map((category, i) => (
-          <li onClick={() => setActiveIndex(i)} className={activeIndex === i ? 'active' : ''}>
+          <li
+            onClick={() => setActiveIndex(i)}
+            className={activeIndex === i ? 'active' : ''}
+            key={i}>
             {category}
           </li>
         ))}
