@@ -48,7 +48,7 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    @media screen and (width < 1260px) {
+    @media screen and (width < 1291px) {
       flex-direction: column;
       gap: 30px;
     }
@@ -60,7 +60,7 @@ body {
   flex-wrap: wrap;
 }
 
-@media screen and (width < 882px) {
+@media screen and (width < 1011px) {
   .categories > ul > li {
     margin-top: 10px;
   }
