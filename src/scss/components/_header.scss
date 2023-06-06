@@ -30,3 +30,20 @@
     }
   }
 }
+
+@media screen and (width < 640px) {
+  .header {
+    .container {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &__logo {
+      div {
+        h1 {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
