@@ -27,7 +27,7 @@ body {
     display: grid;
     place-items: center;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 11px;
 
     @media screen and (width < 1400px) {
