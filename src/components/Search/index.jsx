@@ -1,13 +1,13 @@
 import React from 'react';
+
 import styles from './Search.module.scss';
 
-const Search = () => {
+const Search = ({ searchValue, setSearchValue }) => {
   return (
     <div className={styles.root}>
-      <input className={styles.input} placeholder="Поиск пиццы..." />
       <svg
-        className={styles.icon}
-        enable-background="new 0 0 32 32"
+        className={styles.searchIcon}
+        enableBackground="new 0 0 32 32"
         id="Glyph"
         version="1.1"
         viewBox="0 0 32 32"
@@ -17,6 +17,24 @@ const Search = () => {
           id="XMLID_223_"
         />
       </svg>
+      <input
+        className={styles.input}
+        placeholder="Поиск пиццы..."
+        onChange={(event) => setSearchValue(event.target.value)}
+        value={searchValue}
+      />
+
+      {searchValue && (
+        <svg
+          className={styles.clearIcon}
+          height="24"
+          viewBox="0 0 48 48"
+          width="24"
+          onClick={() => setSearchValue('')}>
+          <path d="M38 12.83l-2.83-2.83-11.17 11.17-11.17-11.17-2.83 2.83 11.17 11.17-11.17 11.17 2.83 2.83 11.17-11.17 11.17 11.17 2.83-2.83-11.17-11.17z" />
+          <path d="M0 0h48v48h-48z" fill="none" />
+        </svg>
+      )}
     </div>
   );
 };
